@@ -123,6 +123,25 @@ df.shape
 # %% [markdown]
 # ## 5. Creación de variables  (Integrante A)
 
+# %%
+df["tipo_precio"] = "medio"
+df.loc[df["price"] <= 70, "tipo_precio"] = "barato"
+df.loc[df["price"] > 150, "tipo_precio"] = "caro"
+df["tipo_precio"].value_counts()
+
+# %%
+df["estancia_larga"] = df["minimum_nights"] >= 30
+df["estancia_larga"].value_counts()
+
+# %%
+df["costo_minimo"] = df["price"] * df["minimum_nights"]
+df[["price", "minimum_nights", "costo_minimo"]].head()
+
+# %% [markdown]
+# Conclusión: creamos tres variables. tipo_precio dice si el anuncio es barato (hasta 70 dolares),
+# medio o caro (mas de 150), estancia_larga dice si pide 30 noches o mas, y costo_minimo es lo minimo
+# que paga alguien por quedarse. La mayoria de los anuncios son de precio medio.
+
 # %% [markdown]
 # ## 6. Filtrado y condiciones en pandas  (Integrante B)
 
