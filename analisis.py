@@ -200,6 +200,52 @@ len(filtro5)
 # ## 7. Agrupación con groupby  (Integrante A)
 
 # %% [markdown]
+# ### 7.1 Precio promedio por distrito
+
+# %%
+df.groupby("neighbourhood_group")["price"].mean()
+
+# %% [markdown]
+# Manhattan es el mas caro con 179 dolares en promedio y el Bronx el mas barato con 85.
+
+# %% [markdown]
+# ### 7.2 Precio promedio por tipo de habitacion
+
+# %%
+df.groupby("room_type")["price"].mean()
+
+# %% [markdown]
+# Un apartamento completo cuesta mas del doble que una habitacion privada (195 contra 85 dolares).
+
+# %% [markdown]
+# ### 7.3 Dias disponibles en promedio por distrito
+
+# %%
+df.groupby("neighbourhood_group")["availability_365"].mean()
+
+# %% [markdown]
+# En Staten Island y el Bronx los anuncios pasan mas dias disponibles, en Brooklyn y Manhattan menos,
+# entonces alla se reservan mas.
+
+# %% [markdown]
+# ### 7.4 Barrios con mas anuncios
+
+# %%
+df.groupby("neighbourhood")["id"].count().sort_values(ascending=False).head()
+
+# %% [markdown]
+# Williamsburg y Bedford-Stuyvesant, los dos en Brooklyn, son los barrios con mas anuncios.
+
+# %% [markdown]
+# ### 7.5 Reseñas promedio por tipo de precio
+
+# %%
+df.groupby("tipo_precio")["number_of_reviews"].mean()
+
+# %% [markdown]
+# Los de precio medio son los que tienen mas reseñas y los caros los que menos.
+
+# %% [markdown]
 # ## 8. Visualizaciones  (Integrante B)
 
 # %% [markdown]
