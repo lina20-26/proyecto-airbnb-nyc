@@ -249,4 +249,62 @@ df.groupby("tipo_precio")["number_of_reviews"].mean()
 # ## 8. Visualizaciones  (Integrante B)
 
 # %% [markdown]
+# ### 8.1 Histograma del precio
+
+# %%
+plt.hist(df["price"], bins=50)
+plt.title("Precio por noche")
+plt.xlabel("dolares")
+plt.show()
+
+# %% [markdown]
+# La mayoria de los anuncios cuestan menos de 200 dolares y hay pocos muy caros.
+
+# %% [markdown]
+# ### 8.2 Anuncios por distrito
+
+# %%
+df["neighbourhood_group"].value_counts().plot(kind="bar")
+plt.title("Anuncios por distrito")
+plt.show()
+
+# %% [markdown]
+# Manhattan y Brooklyn tienen casi todos los anuncios, Staten Island casi no tiene.
+
+# %% [markdown]
+# ### 8.3 Tipos de habitacion
+
+# %%
+df["room_type"].value_counts().plot(kind="pie", autopct="%1.1f%%")
+plt.title("Tipos de habitacion")
+plt.ylabel("")
+plt.show()
+
+# %% [markdown]
+# Mas o menos la mitad son apartamentos completos y casi la otra mitad habitaciones privadas, las
+# compartidas son muy pocas.
+
+# %% [markdown]
+# ### 8.4 Mapa de los anuncios
+
+# %%
+sns.scatterplot(data=df, x="longitude", y="latitude", hue="tipo_precio", s=5)
+plt.title("Ubicacion de los anuncios")
+plt.show()
+
+# %% [markdown]
+# Los anuncios caros estan casi todos en Manhattan, los baratos estan mas repartidos.
+
+# %% [markdown]
+# ### 8.5 Precio por tipo de habitacion
+
+# %%
+sns.boxplot(data=df, x="room_type", y="price")
+plt.title("Precio por tipo de habitacion")
+plt.show()
+
+# %% [markdown]
+# Los apartamentos completos son los mas caros y los que mas cambian de precio.
+
+# %% [markdown]
 # ## 9. Conclusiones finales  (Integrante A)
