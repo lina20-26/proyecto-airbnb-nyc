@@ -94,6 +94,32 @@ df.shape
 # %% [markdown]
 # ## 4. Valores inconsistentes y duplicados  (Integrante B)
 
+# %%
+df.duplicated().sum()
+
+# %%
+print(df["neighbourhood_group"].unique())
+print(df["room_type"].unique())
+
+# %%
+df[df["name"].str.isupper()]["name"].head()
+
+# %%
+df["name"] = df["name"].str.strip().str.lower()
+
+# %%
+print(len(df[df["price"] == 0]))
+print(len(df[df["minimum_nights"] > 365]))
+
+# %%
+df = df[(df["price"] > 0) & (df["minimum_nights"] <= 365)].copy()
+df.shape
+
+# %% [markdown]
+# Conclusión: no hay filas duplicadas y las categorias estan bien escritas. Habia nombres de anuncios
+# en mayusculas y con espacios de mas, asi que los dejamos todos en minuscula. Tambien quitamos 11
+# anuncios con precio 0 y 14 que pedian mas de 365 noches porque eso no tiene sentido.
+
 # %% [markdown]
 # ## 5. Creación de variables  (Integrante A)
 
