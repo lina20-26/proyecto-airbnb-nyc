@@ -308,3 +308,9 @@ plt.show()
 
 # %% [markdown]
 # ## 9. Conclusiones finales  (Integrante A)
+# 1. Manhattan es el distrito con mas anuncios y tambien el mas caro.
+# 2. El tipo de habitacion cambia mucho el precio, un apartamento completo cuesta mas del doble que
+#    una habitacion privada.
+# 3. Hay pocos anfitriones con muchos anuncios y parecen empresas.
+# 4. Muchos anuncios parecen no estar activos porque no tienen reseñas o no tienen dias disponibles.
+# 5. Los anuncios de precio medio son los que mas reseñas tienen.
