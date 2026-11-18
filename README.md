@@ -3,7 +3,7 @@
 Proyecto final de programación II
 
 ## Integrantes
-- Nombre Apellido (Integrante A)
+- Lina María Velásquez Contreras (Integrante A)
 - María Paula Rangel Triana (Integrante B)
 
 ## Fuente de los datos
