@@ -63,6 +63,34 @@ plt.show()
 # %% [markdown]
 # ## 3. Identificación de outliers  (Integrante A)
 
+# %%
+sns.boxplot(x=df["price"])
+plt.title("Precio por noche")
+plt.show()
+
+# %%
+sns.boxplot(x=df["minimum_nights"])
+plt.title("Noches minimas")
+plt.show()
+
+# %%
+q1 = df["price"].quantile(0.25)
+q3 = df["price"].quantile(0.75)
+iqr = q3 - q1
+limite = q3 + 1.5 * iqr
+print(limite)
+print(len(df[df["price"] > limite]))
+print(len(df[df["price"] > 1000]))
+
+# %%
+df = df[df["price"] <= 1000].copy()
+df.shape
+
+# %% [markdown]
+# Conclusión: el precio y las noches minimas tienen muchos outliers. Con el IQR salen 2972 anuncios de
+# mas de 334 dolares, pero muchos son apartamentos caros que si existen, entonces solo quitamos los de
+# mas de 1000 dolares, que eran 239.
+
 # %% [markdown]
 # ## 4. Valores inconsistentes y duplicados  (Integrante B)
 
