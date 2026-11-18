@@ -34,6 +34,32 @@ df.describe()
 # %% [markdown]
 # ## 2. Manejo de datos faltantes  (Integrante B)
 
+# %%
+df.isnull().sum()
+
+# %%
+sns.heatmap(df.isnull(), cbar=False)
+plt.title("Datos faltantes")
+plt.show()
+
+# %%
+len(df[df["number_of_reviews"] == 0])
+
+# %%
+df["reviews_per_month"] = df["reviews_per_month"].fillna(0)
+df["name"] = df["name"].fillna("sin nombre")
+df["host_name"] = df["host_name"].fillna("sin nombre")
+
+# %%
+sns.heatmap(df.isnull(), cbar=False)
+plt.title("Datos faltantes despues de limpiar")
+plt.show()
+
+# %% [markdown]
+# Conclusión: los vacios de reviews_per_month y last_review son los 10052 anuncios que no tienen
+# reseñas, por eso en reviews_per_month pusimos 0 en vez de borrar esas filas. last_review la dejamos
+# asi porque es una fecha. En name y host_name faltaban muy pocos y les pusimos "sin nombre".
+
 # %% [markdown]
 # ## 3. Identificación de outliers  (Integrante A)
 
