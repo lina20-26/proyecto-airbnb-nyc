@@ -4,7 +4,7 @@ Proyecto final de programación II
 
 ## Integrantes
 - Nombre Apellido (Integrante A)
-- Nombre Apellido (Integrante B)
+- María Paula Rangel Triana (Integrante B)
 
 ## Fuente de los datos
 Pendiente (ítem 10).
