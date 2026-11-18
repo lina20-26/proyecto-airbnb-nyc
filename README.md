@@ -45,7 +45,7 @@ La base tiene 48895 filas y 16 columnas, cada fila es un anuncio. Tiene 5 variab
 
 ## Conclusiones
 1. Manhattan es el distrito con mas anuncios y tambien el mas caro.
-2. (Integrante B)
+2. El tipo de habitacion cambia mucho el precio, un apartamento completo cuesta mas del doble que una habitacion privada.
 3. Hay pocos anfitriones con muchos anuncios y parecen empresas.
-4. (Integrante B)
+4. Muchos anuncios parecen no estar activos porque no tienen reseñas o no tienen dias disponibles.
 5. Los anuncios de precio medio son los que mas reseñas tienen.
