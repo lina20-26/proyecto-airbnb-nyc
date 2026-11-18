@@ -21,8 +21,8 @@ Pendiente (ítem 10).
 - datos/: base de datos de Kaggle
 
 ## Conclusiones
-1. (Integrante A)
+1. Manhattan es el distrito con mas anuncios y tambien el mas caro.
 2. (Integrante B)
-3. (Integrante A)
+3. Hay pocos anfitriones con muchos anuncios y parecen empresas.
 4. (Integrante B)
-5. (Integrante A)
+5. Los anuncios de precio medio son los que mas reseñas tienen.
