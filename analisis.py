@@ -146,6 +146,57 @@ df[["price", "minimum_nights", "costo_minimo"]].head()
 # ## 6. Filtrado y condiciones en pandas  (Integrante B)
 
 # %% [markdown]
+# ### 6.1 Apartamentos completos en Manhattan por menos de 100 dolares
+
+# %%
+filtro1 = df[(df["neighbourhood_group"] == "Manhattan") & (df["room_type"] == "Entire home/apt") & (df["price"] < 100)]
+len(filtro1)
+
+# %% [markdown]
+# Son solo 859, en Manhattan es dificil encontrar un apartamento completo barato.
+
+# %% [markdown]
+# ### 6.2 Anuncios que piden 30 noches o mas
+
+# %%
+filtro2 = df[df["estancia_larga"] == True]
+len(filtro2)
+
+# %% [markdown]
+# Son 4437 anuncios, parecen mas para arrendar por meses que para turistas.
+
+# %% [markdown]
+# ### 6.3 Anuncios baratos con 100 reseñas o mas
+
+# %%
+filtro3 = df[(df["tipo_precio"] == "barato") & (df["number_of_reviews"] >= 100)]
+len(filtro3)
+
+# %% [markdown]
+# Solo 743 de los 13527 anuncios baratos tienen 100 reseñas o mas, o sea que ser barato no hace que
+# tenga muchas reseñas.
+
+# %% [markdown]
+# ### 6.4 Anuncios sin dias disponibles
+
+# %%
+filtro4 = df[df["availability_365"] == 0]
+len(filtro4)
+
+# %% [markdown]
+# 17463 anuncios no tienen ningun dia disponible en el año, puede ser que ya no se usen.
+
+# %% [markdown]
+# ### 6.5 Anuncios de anfitriones con 10 o mas anuncios
+
+# %%
+filtro5 = df[df["calculated_host_listings_count"] >= 10]
+len(filtro5)
+
+# %% [markdown]
+# 3153 anuncios son de anfitriones que tienen 10 o mas, esos parecen empresas y no personas.
+
+# %% [markdown]
 # ## 7. Agrupación con groupby  (Integrante A)
 
 # %% [markdown]
